@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<body>
+
+
+<script>
+    $(function () {
+        var data = {
+            roleName: '武松',
+            note: '行者',
+            pageParams: {
+                start: 1,
+                limit: 20
+            }
+        }
+
+        $.post({
+            url: 'findRoles.do',
+            contentType: 'application/json',
+            data: JSON.stringify(data),
+            success: function (result) {
+                console.log(result);
+                /*console.log(result.roleList[0].roleName);*/
+            }
+        });
+
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<body>
+<script>
+    $(function () {
+        var roleList = [
+            {roleName: '阮小二', note: "活阎罗"},
+            {roleName: '阮小五', note: "立地太岁"},
+            {roleName: '阮小七', note: "小老弟"}
+        ];
+
+        $.post({
+            url: 'roleList.do',
+            data: JSON.stringify(roleList),
+            contentType: 'application/json',
+            success: function (msg) {
+                console.log(msg);
+            }
+        });
+
+    })
+</script>
+</body>
+</html>

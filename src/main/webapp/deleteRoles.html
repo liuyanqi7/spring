@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<body>
+
+<script>
+    //需要删除的数组
+    var idList = [2, 34, 1];
+
+    $.post({
+        url: 'deleteRole.do',
+        data: JSON.stringify(idList),
+        contentType: 'application/json',
+        success: function (m) {
+            console.log(m);
+        }
+    });
+
+</script>
+</body>
+</html>
