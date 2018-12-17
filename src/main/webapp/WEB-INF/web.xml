@@ -15,9 +15,10 @@
       <param-value>classpath:spring-mvc.xml</param-value>
     </init-param>
   </servlet>
-  
+
     <servlet-mapping>
       <servlet-name>springmvc</servlet-name>
       <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+
 </web-app>
